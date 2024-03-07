@@ -14,9 +14,6 @@ def main():
     it will implicitly return `None`.
     
     '''
-    # parser.add_argument('directory', help='Path to be scanned')
-    # The lines you provided are setting up command-line arguments for the script using the `argparse`
-    # module in Python. Here's what each line does:
     parser = argparse.ArgumentParser(description='Execute shell command to scan in BlackDuckHub')
     parser.add_argument('-p', '--name', required=True, help='Project_Name')
     parser.add_argument('-v', '--version', required=True, help='Project_Version')
