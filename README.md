@@ -6,7 +6,7 @@ This repository contains a useful script that could help us at the time to perfo
 ## Installation
 
 ```bash
-git clone https://github.com/AldoLeonH/OscarTools.git
+git clone https://github.com/AldoLeonH/scanAutomation.git
 ```
 
 ### To set alias in Linux (Ubuntu)
