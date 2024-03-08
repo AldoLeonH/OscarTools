@@ -16,7 +16,7 @@ nano ~/.bashrc
 Once you get into that file you need to write the absolute file to the location of this script
 
 ```bash
-alias = "python3 absolute/path/to/this/script/scanAutomation.py"
+alias scan = "python3 absolute/path/to/this/script/scanAutomation.py"
 ```
 Save the file and you need to reload this file with the following command
 
