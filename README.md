@@ -47,12 +47,12 @@ scanAutomation.py -p [Project_Name] -v [Project_Version] -i [ReqID]
 ### Example
 
 ```bash
-scanAutomation.py -p [AM_HLA403TH35] -v [MS11_12.0.3] -i [1642]
+scanAutomation.py -p AM_HLA403TH35 -v MS11_12.0.3 -i 1642
 ```
 or with alias
 
 ```bash
-scan -p [AM_HLA403TH35] -v [MS11_12.0.3] -i [1642]
+scan -p AM_HLA403TH35 -v MS11_12.0.3 -i 1642
 ```
 
 ## Contributing
