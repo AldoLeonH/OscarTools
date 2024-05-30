@@ -27,17 +27,19 @@ def main():
     '''
     parser = argparse.ArgumentParser(description='Execute shell command to scan in BlackDuckHub')
     parser.add_argument('-p', '--name', required=True, help='Project_Name')
-    parser.add_argument('-t', '--token', required=True, help='Functional Token from BlackDuckHub')
     parser.add_argument('-v', '--version', required=True, help='Project_Version')
     parser.add_argument('-i', '--id', required=True, help='id')
+    parser.add_argument('-t', '--token', required=True, help='Functional Token from BlackDuckHub')
     args = parser.parse_args()
+    
     path = os.getcwd()
     out_path = os.path.join(os.path.dirname(path), "Output")
     result = subprocess.run(["find . -type d -printf '%d\n' | sort -rn | head -1"], capture_output=True, text=True, shell=True)
     depth = result.stdout.strip()
     output_filename = f"ReqID_{args.id}_{args.name}_{args.version}_scan.txt"
-    path_txt = "/home/uif49951/leon/scan_commands"
+    path_txt = os.path.join(os.path.dirname(path), "ScanCommand")
     detect_sh_cmd = "curl -k -L https://detect.synopsys.com/detect8.sh -o detect.sh && chmod +x detect.sh"
+    
     validation = re.search("^/.*/Workarea/.*/SW$", path)
     
     if validation:
